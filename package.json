@@ -23,7 +23,8 @@
     "friendlyName": "Prompts",
     "machineDir": "machines/",
     "machines": [
-      "select"
+      "select",
+      "confirm"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
