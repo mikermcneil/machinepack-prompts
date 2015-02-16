@@ -1,0 +1,10 @@
+{
+  "machine": "choose-from-list",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

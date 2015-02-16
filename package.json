@@ -13,7 +13,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "machine": "^3.0.0"
+    "machine": "^3.0.0",
+    "inquirer": "^0.8.0"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^0.2.2"
@@ -21,7 +22,9 @@
   "machinepack": {
     "friendlyName": "Prompts",
     "machineDir": "machines/",
-    "machines": [],
+    "machines": [
+      "choose-from-list"
+    ],
     "testsUrl": "https://travis-ci.org/"
   },
   "repository": {
