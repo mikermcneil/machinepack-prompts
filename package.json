@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "machine": "^3.0.0",
-    "inquirer": "^0.8.0"
+    "inquirer": "^0.8.0",
+    "lodash": "^3.2.0"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^0.2.2"

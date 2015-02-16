@@ -103,8 +103,8 @@ module.exports = {
 
         // Value is falsy
         else {
-          if (promptDef.example) {
-            return 'e.g. '+promptDef.example;
+          if (inputs.exampleValue) {
+            return 'e.g. '+inputs.exampleValue;
           }
           return false;
         }
