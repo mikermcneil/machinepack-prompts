@@ -48,10 +48,10 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
 
-    sigint: {
-      friendlyName: 'User pressed CTRL+C',
-      description: 'The command-line user canceled by pressing CTRL+C.'
-    },
+    // sigint: {
+    //   friendlyName: 'User pressed CTRL+C',
+    //   description: 'The command-line user canceled by pressing CTRL+C.'
+    // },
 
     success: {
       description: 'Returned the `value` property of the choice that was selected.',
@@ -69,11 +69,14 @@ module.exports = {
     // Since inquirer doesn't allow us to tap into this,
     // we'll handle it here with the help of a spin-lock to ensure
     // that no issues arise.
-    process.on( 'SIGINT', function (){
-      if (spinlock) return;
-      spinlock = true;
-      return exits.sigint();
-    });
+    //
+    // ...but.... this doesn't work yet.
+    //////////////////////////////////////////////////////////////////////////////
+    // process.on( 'SIGINT', function (){
+    //   if (spinlock) return;
+    //   spinlock = true;
+    //   return exits.sigint();
+    // });
 
     inquirer.prompt([{
       type: 'list',
