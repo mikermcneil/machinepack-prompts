@@ -48,6 +48,11 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
 
+    sigint: {
+      friendlyName: 'User pressed CTRL+C',
+      description: 'The command-line user canceled by pressing CTRL+C.'
+    },
+
     success: {
       description: 'Returned the `value` property of the choice that was selected.',
       example: 'some-unique-identifier'
@@ -59,6 +64,17 @@ module.exports = {
   fn: function(inputs, exits) {
     var inquirer = require('inquirer');
 
+    var spinlock;
+
+    // Since inquirer doesn't allow us to tap into this,
+    // we'll handle it here with the help of a spin-lock to ensure
+    // that no issues arise.
+    process.on( 'SIGINT', function (){
+      if (spinlock) return;
+      spinlock = true;
+      return exits.sigint();
+    });
+
     inquirer.prompt([{
       type: 'list',
       name: 'choice',
@@ -66,7 +82,8 @@ module.exports = {
       paginated: inputs.paginated || false,
       choices: inputs.choices
     }], function(answers) {
-      console.log('=>',answers.choice);
+      if (spinlock) return;
+      spinlock = true;
       return exits.success(answers.choice);
     });
   },
