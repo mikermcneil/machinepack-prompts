@@ -26,7 +26,8 @@
     "machines": [
       "select",
       "confirm",
-      "text"
+      "text",
+      "multiselect"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
