@@ -24,7 +24,8 @@
     "machineDir": "machines/",
     "machines": [
       "select",
-      "confirm"
+      "confirm",
+      "text"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
