@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Choose from list',
+  friendlyName: 'Select',
 
 
   description: 'Prompt the command-line user to make a choice from a list of options.',
