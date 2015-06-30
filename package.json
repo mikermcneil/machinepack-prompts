@@ -13,12 +13,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "machine": "^3.0.0",
     "inquirer": "^0.8.0",
-    "lodash": "^3.2.0"
+    "lodash": "^3.2.0",
+    "machine": "^10.3.1"
   },
   "devDependencies": {
-    "test-machinepack-mocha": "^0.2.2"
+    "test-machinepack-mocha": "^2.1.1"
   },
   "machinepack": {
     "friendlyName": "Prompts",
