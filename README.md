@@ -8,7 +8,7 @@
 Produce interactive prompts in the console and consume the answers.
 
 
-## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-prompts.svg)](http://badge.fury.io/js/machinepack-prompts) [![Build Status](https://travis-ci.org/mikermcneil/machinepack-prompts.png?branch=master)](https://travis-ci.org/mikermcneil/machinepack-prompts)
+## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-prompts.svg)](http://badge.fury.io/js/machinepack-prompts) [![Build Status](https://travis-ci.org/.png?branch=master)](https://travis-ci.org/)
 
 ```sh
 $ npm install machinepack-prompts
